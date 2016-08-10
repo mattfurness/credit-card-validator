@@ -43,7 +43,7 @@ bundle exec credit_card_validator "4111 1111 1111 1111"
 #### Example invalid card
 ```sh
 bundle exec credit_card_validator 5105105105105106
->INVALID: Oh no, card 5105105105105106 with type MasterCard failed because it had invalid_checksum
+>INVALID: Oh no, card 5105105105105106 with type MasterCard failed because it had "invalid_checksum"
 ```
 
 ## Test
