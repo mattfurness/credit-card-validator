@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'credit_card_validator'
+
+result = CreditCardValidator.validate(ARGV[0])
+card_number = result.credit_card.number
+
+if result.valid?
+	puts "VALID: CC number looks good. It is a #{result.credit_card.type} with the number #{card_number}"
+else
+	puts "INVALID: Oh no, card #{card_number.empty? ? '"empty"' : card_number} with type #{result.credit_card.type} failed because it had \"#{result.failure_reason}\""
+end
